@@ -1,0 +1,84 @@
+/* Winterpost's site: the game's navy, timber and brass, its own two faces (Bitter, Archivo Narrow - SIL Open Font
+   Licence, served from this folder so no third party sees a visitor). */
+@font-face { font-family: "Bitter"; src: url("fonts/Bitter-400.ttf") format("truetype"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Bitter"; src: url("fonts/Bitter-600.ttf") format("truetype"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Archivo Narrow"; src: url("fonts/ArchivoNarrow-600.ttf") format("truetype"); font-weight: 600; font-display: swap; }
+
+:root {
+  --navy: #0f1820;
+  --navy-2: #16232e;
+  --frost: #e8eef2;
+  --frost-dim: #b4c2cc;
+  --brass: #c89a4e;
+  --brass-light: #ddb66c;
+  --timber: #3a2a1e;
+  --rule: rgba(200, 154, 78, 0.35);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0; }
+
+body {
+  background: var(--navy);
+  color: var(--frost);
+  font: 400 17px/1.6 "Bitter", Georgia, "Times New Roman", serif;
+  padding: 0 16px;
+}
+
+main, header, footer { max-width: 680px; margin: 0 auto; }
+
+header { padding: 40px 0 8px; display: flex; align-items: center; gap: 16px; }
+header img { width: 72px; height: 72px; border-radius: 16px; flex: none; }
+header a { color: inherit; text-decoration: none; }
+
+.wordmark {
+  font: 600 34px/1.1 "Archivo Narrow", "Arial Narrow", sans-serif;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--brass-light);
+  margin: 0;
+}
+
+.tagline { margin: 2px 0 0; color: var(--frost-dim); font-size: 15px; }
+
+nav { max-width: 680px; margin: 0 auto; padding: 8px 0 20px; display: flex; flex-wrap: wrap; gap: 6px 18px;
+      border-bottom: 1px solid var(--rule); }
+nav a { font: 600 15px/1.4 "Archivo Narrow", "Arial Narrow", sans-serif; letter-spacing: 0.05em; text-transform: uppercase;
+        color: var(--brass); text-decoration: none; }
+nav a[aria-current="page"] { color: var(--frost); }
+
+h1 { font: 600 28px/1.25 "Bitter", Georgia, serif; margin: 28px 0 8px; text-wrap: balance; }
+h2 { font: 600 20px/1.3 "Bitter", Georgia, serif; margin: 28px 0 6px; color: var(--brass-light); }
+p, li { max-width: 65ch; }
+a { color: var(--brass-light); }
+ul { padding-left: 1.2em; }
+li + li { margin-top: 4px; }
+
+.updated { color: var(--frost-dim); font-size: 14px; margin-top: 0; }
+
+.card { background: var(--navy-2); border: 1px solid var(--rule); border-radius: 10px; padding: 16px 18px; margin: 20px 0; }
+.card p:first-child { margin-top: 0; }
+.card p:last-child { margin-bottom: 0; }
+
+header .home { display: flex; align-items: center; gap: 12px; }
+header .home img { width: 56px; height: 56px; border-radius: 13px; }
+
+.email { font: 600 18px/1.4 "Archivo Narrow", "Arial Narrow", sans-serif; letter-spacing: 0.02em; color: var(--brass-light);
+         overflow-wrap: anywhere; user-select: all; }
+
+.badges { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0; }
+.badge { margin: 0; padding: 8px 14px; border: 1px solid var(--rule); border-radius: 10px; background: var(--navy-2);
+         display: flex; flex-direction: column; min-width: 150px; }
+.badge-store { font: 600 18px/1.2 "Archivo Narrow", "Arial Narrow", sans-serif; letter-spacing: 0.04em; color: var(--frost); }
+.badge-note { font-size: 14px; color: var(--frost-dim); }
+
+@media (max-width: 480px) {
+  body { font-size: 16px; }
+  header { padding-top: 24px; }
+  .wordmark { font-size: 28px; }
+  h1 { font-size: 24px; }
+}
+
+footer { padding: 36px 0 48px; color: var(--frost-dim); font-size: 14px; border-top: 1px solid var(--rule); margin-top: 40px; }
